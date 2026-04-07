@@ -3,21 +3,85 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>I Only Buy Teslas — Tesla Buying & Selling Concierge</title>
+    <title>I Only Buy Teslas — Tesla Buying &amp; Selling Concierge</title>
     <meta
       name="description"
-      content="Independent Tesla buying and selling concierge for private buyers, sellers, and dealers. Leave your number and get a text back."
+      content="Tesla-only help for buyers and sellers. Get expert help choosing the right Tesla, pressure-testing listings, or selling yours with a stronger listing."
     />
     <meta name="theme-color" content="#0b0d12" />
     <meta property="og:title" content="I Only Buy Teslas" />
     <meta
       property="og:description"
-      content="Independent Tesla buying and selling concierge. Leave your number and get a text back."
+      content="Tesla-only help for buyers and sellers. Leave your number and get a text back from Adam Qureshi."
     />
     <meta property="og:type" content="website" />
-    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <meta property="og:image" content="./assets/adam-qureshi.jpg" />
+    <meta property="og:image:alt" content="Portrait of Adam Qureshi" />
+    <link rel="icon" href="./assets/iobt-icon-192.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preload" href="./assets/adam-qureshi.jpg" as="image" />
     <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfessionalService",
+            "name": "I Only Buy Teslas",
+            "description": "Tesla-only buying and selling concierge for private buyers, sellers, and limited dealer sourcing.",
+            "founder": {
+              "@type": "Person",
+              "name": "Adam Qureshi"
+            },
+            "areaServed": "United States",
+            "serviceType": [
+              "Tesla buying consultation",
+              "Tesla concierge search",
+              "Sell your Tesla support",
+              "Dealer inventory sourcing"
+            ],
+            "sameAs": [
+              "https://onlyusedtesla.com/",
+              "https://www.linkedin.com/in/adamqureshi/"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Are you a broker or dealer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. This is independent Tesla research, strategy, and concierge support. You stay in control of the transaction."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you only work in New York?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. I work online and can help nationwide, schedule permitting. I operate on East Coast time."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you sell private data?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Your information is only used so I can respond to your request by text or phone."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -25,8 +89,20 @@
     <header class="site-header">
       <div class="shell header-inner">
         <a class="brand" href="#top" aria-label="I Only Buy Teslas home">
-          <span class="brand-mark">I ONLY BUY TESLAS</span>
-          <span class="brand-subtitle">Tesla buying &amp; selling concierge</span>
+          <span class="brand-lockup">
+            <img
+              src="./assets/iobt-icon.png"
+              alt=""
+              class="brand-icon"
+              width="512"
+              height="512"
+              aria-hidden="true"
+            />
+            <span class="brand-text">
+              <span class="brand-mark">I ONLY BUY TESLAS</span>
+              <span class="brand-subtitle">Tesla buying &amp; selling concierge</span>
+            </span>
+          </span>
         </a>
 
         <nav class="site-nav" aria-label="Primary navigation">
@@ -43,17 +119,18 @@
       <section class="hero" id="top">
         <div class="shell hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Independent · Tesla-only · NYC based</p>
-            <h1>Buy or sell your Tesla with a human expert.</h1>
+            <p class="eyebrow">Tesla-only help · NYC based · East Coast hours</p>
+            <h1>Need help buying a Tesla or selling yours?</h1>
             <p class="lead">
-              I help private buyers, Tesla owners, and dealers make better Tesla decisions without
-              dealership pressure, generic car advice, or a long back-and-forth.
+              If you already know you want a Tesla, but want to make the right move, I help
+              with the parts that matter: choosing the right car, pressure-testing listings,
+              narrowing the market, and getting your current Tesla sold with a stronger listing.
             </p>
 
-            <ul class="hero-points" role="list">
-              <li>11 years in the Tesla market</li>
-              <li>Online support, working East Coast hours</li>
-              <li>Leave your number and I&rsquo;ll text you back</li>
+            <ul class="hero-points" role="list" aria-label="Common reasons people reach out">
+              <li>You found a Tesla and want a smart second opinion before you move.</li>
+              <li>You want help narrowing the right model, trim, year, and budget.</li>
+              <li>You want your Tesla priced, positioned, and listed better.</li>
             </ul>
 
             <div class="hero-actions">
@@ -61,18 +138,26 @@
               <a class="button button-secondary" href="#services">See services</a>
             </div>
 
+            <ul class="trust-chips" role="list" aria-label="Business proof points">
+              <li>11 years in business</li>
+              <li>Independent</li>
+              <li>No VC</li>
+              <li>No corp</li>
+              <li>No selling private data</li>
+            </ul>
+
             <p class="microcopy">
-              Availability is limited and based on my current schedule. This is independent Tesla
-              research, strategy, and concierge support &mdash; not broker or dealer representation.
+              You leave your name and number. I text you back. If it looks like a fit, we set the
+              next step.
             </p>
           </div>
 
           <aside class="hero-panel" aria-label="How this works">
-            <h2>Start fast</h2>
+            <h2>How it starts</h2>
             <ol class="process-list" role="list">
               <li>
-                <strong>Pick a service</strong>
-                <span>Consulting, search help, selling support, or dealer sourcing.</span>
+                <strong>Tell me what you need</strong>
+                <span>Buying help, search help, selling support, or limited dealer sourcing.</span>
               </li>
               <li>
                 <strong>Leave your number</strong>
@@ -80,7 +165,7 @@
               </li>
               <li>
                 <strong>I text you back</strong>
-                <span>We narrow down scope, timing, and whether it is a fit.</span>
+                <span>We narrow down fit, timing, and the right next step.</span>
               </li>
             </ol>
           </aside>
@@ -91,10 +176,8 @@
         <div class="shell">
           <div class="section-heading">
             <p class="eyebrow">Services</p>
-            <h2>Three clear offers, with fixed scope.</h2>
-            <p>
-              The goal is simple: defined deliverables, defined time, no vague unlimited support.
-            </p>
+            <h2>Choose the level of help you need.</h2>
+            <p>Clear scope. Clear time. Clear pricing. No vague unlimited support.</p>
           </div>
 
           <div class="card-grid">
@@ -102,8 +185,8 @@
               <p class="card-price">$750 flat</p>
               <h3>Tesla buying consultation</h3>
               <p>
-                Best for people who already found a car, want a second opinion, or need clarity
-                before making a move.
+                Best if you already found a car, have a shortlist, or want a Tesla expert
+                second opinion before you commit.
               </p>
               <ul role="list">
                 <li>45-minute strategy call</li>
@@ -112,14 +195,15 @@
                 <li>Written follow-up with next steps</li>
                 <li>7 days of follow-up text questions</li>
               </ul>
+              <a class="button button-secondary card-button" href="#contact">Ask about this</a>
             </article>
 
             <article class="service-card">
               <p class="card-price">$1,000 starting</p>
               <h3>Find your next Tesla</h3>
               <p>
-                A defined-scope concierge search for buyers who want hands-on help narrowing the
-                market and finding a strong fit.
+                Best if you want hands-on help narrowing the market, filtering out bad fits,
+                and getting to a smarter shortlist faster.
               </p>
               <ul role="list">
                 <li>Kickoff call and search brief</li>
@@ -128,14 +212,15 @@
                 <li>Shortlist plus recommendation</li>
                 <li>Next-step guidance for contacting the seller or dealer</li>
               </ul>
+              <a class="button button-secondary card-button" href="#contact">Ask about this</a>
             </article>
 
             <article class="service-card">
               <p class="card-price">$1,000 starting</p>
               <h3>Sell your Tesla</h3>
               <p>
-                Done-for-you support for owners who want help pricing, packaging, and posting the
-                car online with a stronger listing.
+                Best if you want help pricing, packaging, and posting your Tesla so the listing
+                looks stronger and the process feels cleaner.
               </p>
               <ul role="list">
                 <li>Pricing strategy and market positioning</li>
@@ -144,13 +229,14 @@
                 <li>Buyer-screening guidance</li>
                 <li>14 days of seller support after launch</li>
               </ul>
+              <a class="button button-secondary card-button" href="#contact">Ask about this</a>
             </article>
           </div>
 
           <p class="scope-note">
-            Dealer inventory sourcing is available by request. Extended negotiation, paid ads,
-            travel, shipping coordination, or longer engagements are quoted separately before work
-            begins.
+            Dealer inventory sourcing is available by request. If you are a dealer, ask about a
+            custom scope. Extended negotiation, paid ads, travel, shipping coordination, or longer
+            engagements are quoted separately before work begins.
           </p>
         </div>
       </section>
@@ -158,32 +244,32 @@
       <section class="section section-alt" id="fit">
         <div class="shell">
           <div class="section-heading narrow">
-            <p class="eyebrow">Who I work with</p>
-            <h2>Focused help for buyers, sellers, and dealers.</h2>
+            <p class="eyebrow">Who this is for</p>
+            <h2>Built for Tesla buyers and owners first. Limited dealer work too.</h2>
           </div>
 
           <div class="audience-grid">
             <article class="audience-card">
               <h3>Private buyers</h3>
               <p>
-                You want help deciding what to buy, pressure-testing a listing, or finding the
-                right Tesla without wasting time.
+                You do not want to spend serious money and still end up with the wrong Tesla,
+                the wrong trim, or the wrong listing.
               </p>
             </article>
 
             <article class="audience-card">
               <h3>Tesla owners selling</h3>
               <p>
-                You want a cleaner listing, sharper positioning, and a more organized process for
-                getting the car sold online.
+                You want help making your car easier to understand, easier to trust, and easier
+                to buy online.
               </p>
             </article>
 
             <article class="audience-card">
               <h3>Dealers</h3>
               <p>
-                You want Tesla-specific sourcing help for inventory and a specialist who already
-                understands the product and market.
+                You want Tesla-only inventory sourcing help from someone already deep in the
+                product and market.
               </p>
             </article>
           </div>
@@ -199,6 +285,7 @@
               class="about-image"
               width="400"
               height="400"
+              loading="lazy"
             />
           </div>
 
@@ -207,13 +294,17 @@
             <h2>Built by Adam Qureshi.</h2>
             <p>
               I run <a href="https://onlyusedtesla.com/" target="_blank" rel="noreferrer">Only Used Tesla</a>
-              and I&rsquo;ve spent the last 11 years focused on the Tesla market. This service is for
-              people who want specific Tesla help from someone who already knows the cars,
-              listings, and buyer questions.
+              and I have spent the last 11 years focused on the Tesla market. This service exists
+              for people who want Tesla-specific help from someone who already knows the cars,
+              listings, buyer questions, and seller friction points.
             </p>
             <p>
-              I work online from New York City on East Coast time. I am not a broker. I offer
-              independent Tesla guidance, sourcing support, and seller support as time allows.
+              This is an independent, one-person service. No VC. No corp. No selling private
+              data. When you submit the form, it goes to me.
+            </p>
+            <p>
+              I work online from New York City on East Coast time. I am not a broker, and I take
+              on work based on fit and current capacity.
             </p>
             <div class="about-links">
               <a class="text-link" href="https://onlyusedtesla.com/" target="_blank" rel="noreferrer"
@@ -256,10 +347,18 @@
             </details>
 
             <details>
+              <summary>Do you sell private data?</summary>
+              <p>
+                No. Your information is only used so I can respond to your request by text or
+                phone.
+              </p>
+            </details>
+
+            <details>
               <summary>What happens after I submit the form?</summary>
               <p>
-                I review your request and text you back to narrow down a time for a discovery call
-                or next step.
+                I review your request and text you back to narrow down a time for a call or next
+                step.
               </p>
             </details>
 
@@ -280,14 +379,14 @@
             <p class="eyebrow">Contact</p>
             <h2>Request a text back.</h2>
             <p class="contact-lead">
-              Leave your full name, number, and what you need. I&rsquo;ll text you back to narrow down a
-              time.
+              Leave your full name, number, and what you need help with. I will review it and
+              text you back to narrow down timing.
             </p>
 
             <ul class="contact-points" role="list">
               <li>Fastest for mobile visitors</li>
               <li>No public phone number to scrape</li>
-              <li>Best for text-first scheduling</li>
+              <li>Your info stays private</li>
             </ul>
           </div>
 
@@ -344,7 +443,8 @@
               Request a text back
             </button>
             <p class="form-note">
-              Your number is only used so I can text or call you about this request.
+              Your number is only used so I can text or call you about this request. I do not
+              sell private data.
             </p>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </form>
@@ -353,10 +453,48 @@
     </main>
 
     <footer class="site-footer">
-      <div class="shell footer-inner">
-        <p>
-          <strong>I Only Buy Teslas</strong> &mdash; independent Tesla buying &amp; selling concierge.
-        </p>
+      <div class="shell footer-top">
+        <div class="footer-brand-block">
+          <p class="footer-title">I Only Buy Teslas</p>
+          <p class="footer-copy">
+            Tesla buying &amp; selling concierge for private buyers, sellers, and limited dealer
+            sourcing.
+          </p>
+          <ul class="footer-proof" role="list" aria-label="Business proof points">
+            <li>Independent</li>
+            <li>No VC</li>
+            <li>No corp</li>
+            <li>No selling private data</li>
+          </ul>
+        </div>
+
+        <a
+          class="venture-link"
+          href="https://onlyusedtesla.com/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Only Used Tesla"
+        >
+          <img
+            src="./assets/only-used-tesla-logo.png"
+            alt="Only Used Tesla"
+            class="footer-logo"
+            width="920"
+            height="413"
+            loading="lazy"
+          />
+          <span>An Only Used Tesla venture</span>
+        </a>
+      </div>
+
+      <div class="shell footer-bottom">
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="https://onlyusedtesla.com/" target="_blank" rel="noreferrer">Only Used Tesla</a>
+          <a href="https://www.linkedin.com/in/adamqureshi/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
         <p>
           Not affiliated with Tesla, Inc. Tesla is a trademark of Tesla, Inc. &copy;
           <span id="year"></span>

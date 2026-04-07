@@ -5,7 +5,7 @@
   --bg-elevated: #171d29;
   --surface: rgba(255, 255, 255, 0.03);
   --line: rgba(255, 255, 255, 0.12);
-  --line-strong: rgba(106, 163, 255, 0.38);
+  --line-strong: rgba(106, 163, 255, 0.42);
   --text: #f4f7fb;
   --muted: #a9b2c0;
   --accent: #6aa3ff;
@@ -28,8 +28,8 @@
   --space-7: 4rem;
   --space-8: 5rem;
   --border: 0.0625rem solid var(--line);
-  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
 }
 
 * {
@@ -43,13 +43,14 @@ html {
 
 body {
   margin: 0;
+  min-height: 100vh;
   font-family: var(--font-sans);
   background:
     radial-gradient(circle at top right, rgba(106, 163, 255, 0.18), transparent 30%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 18%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 18%),
     var(--bg);
   color: var(--text);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 img {
@@ -99,9 +100,9 @@ button {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 70;
   backdrop-filter: blur(1rem);
-  background: rgba(11, 13, 18, 0.78);
+  background: rgba(11, 13, 18, 0.8);
   border-bottom: var(--border);
 }
 
@@ -109,26 +110,52 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 0;
+  gap: 0.85rem 1rem;
+  padding: 0.9rem 0;
 }
 
 .brand {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 0.15rem;
   text-decoration: none;
+  min-width: 0;
+}
+
+.brand:hover,
+.brand:focus-visible {
+  color: inherit;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.brand-icon {
+  flex: 0 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  min-width: 0;
 }
 
 .brand-mark {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
 }
 
 .brand-subtitle {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .site-nav {
@@ -140,7 +167,7 @@ button {
 .site-nav a {
   color: var(--muted);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .site-nav a:hover,
@@ -157,13 +184,16 @@ button {
   padding: 0.85rem 1.2rem;
   border-radius: 999px;
   border: 0.0625rem solid transparent;
-  font-weight: 700;
+  font-weight: 800;
   text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
   transition:
     transform 160ms ease,
     box-shadow 160ms ease,
     border-color 160ms ease,
-    background-color 160ms ease;
+    background-color 160ms ease,
+    color 160ms ease;
 }
 
 .button:hover,
@@ -211,7 +241,7 @@ button {
 }
 
 .hero {
-  padding: 4rem 0 3rem;
+  padding: 4.25rem 0 3.25rem;
 }
 
 .hero-grid {
@@ -220,11 +250,11 @@ button {
 }
 
 .eyebrow {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.85rem;
   color: var(--accent-strong);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   font-weight: 800;
 }
 
@@ -232,13 +262,13 @@ h1,
 h2,
 h3 {
   margin: 0;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
 }
 
 h1 {
   font-size: clamp(2.4rem, 8vw, 4.8rem);
-  max-width: 12ch;
+  max-width: 11ch;
 }
 
 h2 {
@@ -256,20 +286,25 @@ h3 {
 .scope-note,
 .audience-card p,
 .service-card p,
-.faq-list p {
+.faq-list p,
+.footer-copy,
+.footer-bottom p,
+.microcopy {
   color: var(--muted);
 }
 
 .lead {
   margin: 1rem 0 0;
-  max-width: 40rem;
+  max-width: 39rem;
   font-size: 1.08rem;
 }
 
 .hero-points,
 .process-list,
 .service-card ul,
-.contact-points {
+.contact-points,
+.trust-chips,
+.footer-proof {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -282,7 +317,8 @@ h3 {
 }
 
 .hero-points li,
-.contact-points li {
+.contact-points li,
+.service-card li {
   position: relative;
   padding-left: 1.4rem;
 }
@@ -293,7 +329,7 @@ h3 {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.55rem;
+  top: 0.62rem;
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 999px;
@@ -305,21 +341,42 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  margin-top: 1.5rem;
+  margin-top: 1.6rem;
+}
+
+.trust-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.15rem;
+}
+
+.trust-chips li,
+.footer-proof li {
+  padding: 0.55rem 0.85rem;
+  border: var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .microcopy {
   margin: 1rem 0 0;
-  color: var(--muted);
-  font-size: 0.95rem;
   max-width: 44rem;
+  font-size: 0.95rem;
 }
 
 .hero-panel,
 .service-card,
 .audience-card,
 .contact-form,
-.about-image-wrap {
+.about-image-wrap,
+.venture-link,
+.faq-list details {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
   border: var(--border);
   border-radius: var(--radius-l);
@@ -331,7 +388,7 @@ h3 {
 }
 
 .hero-panel h2 {
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   margin-bottom: 1rem;
 }
 
@@ -359,7 +416,7 @@ h3 {
 }
 
 .section {
-  padding: 3.5rem 0;
+  padding: 3.75rem 0;
 }
 
 .section-alt {
@@ -377,7 +434,7 @@ h3 {
 }
 
 .section-heading.narrow h2 {
-  max-width: 18ch;
+  max-width: 20ch;
 }
 
 .card-grid,
@@ -387,6 +444,8 @@ h3 {
 }
 
 .service-card {
+  display: flex;
+  flex-direction: column;
   padding: 1.4rem;
 }
 
@@ -417,16 +476,19 @@ h3 {
 .service-card ul {
   display: grid;
   gap: 0.8rem;
+  margin-bottom: 1.25rem;
 }
 
 .service-card li {
-  position: relative;
-  padding-left: 1.4rem;
   color: var(--text);
 }
 
+.card-button {
+  margin-top: auto;
+}
+
 .scope-note {
-  margin: 1.1rem 0 0;
+  margin: 1.15rem 0 0;
   max-width: 60rem;
 }
 
@@ -435,7 +497,7 @@ h3 {
 }
 
 .audience-card h3 {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.65rem;
 }
 
 .about-grid,
@@ -459,7 +521,7 @@ h3 {
 }
 
 .about-copy p {
-  margin: 0.9rem 0 0;
+  margin: 0.95rem 0 0;
   max-width: 38rem;
 }
 
@@ -473,6 +535,7 @@ h3 {
 .text-link {
   color: var(--accent-strong);
   font-weight: 700;
+  text-underline-offset: 0.18em;
 }
 
 .faq-wrap {
@@ -486,9 +549,6 @@ h3 {
 }
 
 .faq-list details {
-  border: var(--border);
-  border-radius: var(--radius-m);
-  background: rgba(255, 255, 255, 0.02);
   padding: 1rem 1rem 1rem 1.1rem;
 }
 
@@ -590,17 +650,75 @@ summary:focus-visible {
 
 .site-footer {
   border-top: var(--border);
-  padding: 1.25rem 0 6rem;
+  padding: 1.5rem 0 6rem;
+  background: rgba(255, 255, 255, 0.015);
 }
 
-.footer-inner {
+.footer-top,
+.footer-bottom {
   display: grid;
-  gap: 0.25rem;
+  gap: 1.1rem;
 }
 
-.footer-inner p {
+.footer-title {
   margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.footer-copy {
+  margin: 0.55rem 0 0;
+  max-width: 36rem;
+}
+
+.footer-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.venture-link {
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.venture-link:hover,
+.venture-link:focus-visible {
+  color: inherit;
+}
+
+.footer-logo {
+  width: min(100%, 18rem);
+  height: auto;
+}
+
+.venture-link span {
+  display: block;
+  margin-top: 0.8rem;
   color: var(--muted);
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--text);
+}
+
+.footer-bottom p {
+  margin: 0;
   font-size: 0.95rem;
 }
 
@@ -649,20 +767,27 @@ summary:focus-visible {
 
   .hero-grid,
   .about-grid,
-  .contact-grid {
-    grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.95fr);
+  .contact-grid,
+  .footer-top,
+  .footer-bottom {
+    grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.95fr);
   }
 
-  .card-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
+  .card-grid,
   .audience-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .faq-wrap {
     grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  }
+
+  .mobile-cta {
+    display: none;
+  }
+
+  .site-footer {
+    padding-bottom: 2.5rem;
   }
 }
 
@@ -680,7 +805,7 @@ summary:focus-visible {
   }
 
   .contact-section {
-    padding-bottom: 8rem;
+    padding-bottom: 6rem;
   }
 }
 

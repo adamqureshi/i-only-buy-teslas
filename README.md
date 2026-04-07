@@ -8,19 +8,42 @@ Use **I Only Buy Teslas**.
 
 Why:
 
-- **I Buy Teslas** sounds like you directly purchase cars for cash.
-- **I Buy Tesla** sounds incomplete.
-- **I Only Buy Teslas** is the clearest wedge and stays close to your existing **Only Used Tesla** brand.
+- **I Buy Teslas** sounds like you directly buy cars for cash.
+- **I Buy Tesla** reads incomplete.
+- **I Only Buy Teslas** is the clearest wedge and stays closest to **Only Used Tesla**.
 
 For the on-site positioning, keep the subtitle as:
 
 > Tesla buying & selling concierge
 
-That makes it clear you help buyers and sellers, not just one side.
+## What changed in this version
+
+- Added the provided **icon** to the header brand lockup
+- Added the provided **Only Used Tesla logo** to the footer
+- Added the footer line: **An Only Used Tesla venture**
+- Switched the site typography to **Montserrat**
+- Reworked the homepage copy to talk more directly to the end customer
+- Added clear trust signals:
+  - 11 years in business
+  - Independent
+  - No VC
+  - No corp
+  - No selling private data
+- Kept the no-public-phone-number contact flow intact
+
+## Positioning used on the site
+
+The homepage now talks more directly to buyers and sellers:
+
+- You found a Tesla and want a second opinion
+- You want help narrowing the right model, trim, year, and budget
+- You want to sell your Tesla with a stronger listing
+
+Dealer work is still present, but it is framed as **limited custom work** instead of leading the page.
 
 ## Pricing recommendation
 
-Keep the pricing defined by **scope**, not open-ended time.
+Keep pricing defined by **scope**, not open-ended time.
 
 - **Tesla buying consultation — $750**
   - 45-minute call
@@ -41,11 +64,9 @@ Keep the pricing defined by **scope**, not open-ended time.
   - 14 days of seller support
 
 - **Dealer sourcing**
-  - quote this separately or keep it custom
+  - quote separately
 
-This protects your time and makes the offer easier to understand.
-
-## How the contact flow works
+## Contact flow
 
 Your personal phone number does **not** appear in the HTML.
 
@@ -58,18 +79,12 @@ Visitors use a short form:
 
 The site posts to `/api/contact`, which emails you the lead through Resend. Then you text them back manually.
 
-## Why this is better than putting your number on the page
-
-- less bot scraping
-- cleaner mobile-first flow
-- keeps the first contact organized
-- your personal number stays private
-
 ## Tech
 
 - plain HTML
 - plain CSS
 - plain JavaScript
+- Google Fonts for Montserrat
 - Vercel serverless function for the contact form
 - optional Resend email delivery
 
@@ -82,7 +97,10 @@ i-only-buy-teslas/
 ├── api/
 │   └── contact.js
 ├── assets/
-│   └── adam-qureshi.jpg
+│   ├── adam-qureshi.jpg
+│   ├── iobt-icon.png
+│   ├── iobt-icon-192.png
+│   └── only-used-tesla-logo.png
 ├── .env.example
 ├── .gitignore
 ├── favicon.svg
@@ -113,14 +131,13 @@ npx vercel dev
 
 ## Deploy to Vercel
 
-1. Create a new GitHub repo named **`i-only-buy-teslas`**
-2. Upload these files
-3. Import the repo into Vercel
-4. Add environment variables in Vercel:
+1. Push these files to the **`i-only-buy-teslas`** repo
+2. Import the repo into Vercel
+3. Add environment variables in Vercel:
    - `RESEND_API_KEY`
    - `LEAD_DESTINATION_EMAIL`
    - `FROM_EMAIL`
-5. Deploy
+4. Deploy
 
 ### Example env values
 
@@ -132,39 +149,9 @@ FROM_EMAIL=leads@yourdomain.com
 
 `FROM_EMAIL` must be from a verified domain in Resend.
 
-## Optional upgrade for true text-first intake
-
-If you want people to **text without exposing your personal number**, the best upgrade is:
-
-- buy a dedicated **Twilio** number
-- use that number for inbound texting
-- keep your real mobile number private
-- optionally forward leads or notifications to your personal phone
-
-That gives you a real business texting layer without putting your personal mobile on the public site.
-
-## Copy notes
-
-The homepage intentionally does **not** say you directly buy cars for cash.
-It frames the business as:
-
-- Tesla buying consultation
-- Tesla concierge / sourcing
-- Tesla selling support
-- dealer inventory sourcing
-
-That keeps the brand sharp while making the offer accurate.
-
 ## Notes
 
 - The site includes a honeypot field and a simple time-based spam check.
 - Your personal number is not included in the page source.
 - The contact form is the main conversion path.
 - The design is mobile-first and scales up with `em`-based breakpoints and root font-size increases.
-
-## Next changes I would make after launch
-
-1. Add testimonials
-2. Add a dedicated dealer page if that business grows
-3. Add a separate “Sell Your Tesla” landing page
-4. Replace the portrait later with a more intentional brand photo if needed
