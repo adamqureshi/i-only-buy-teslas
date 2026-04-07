@@ -1,0 +1,10 @@
+{
+  "name": "i-only-buy-teslas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mobile-first Tesla concierge microsite for Vercel.",
+  "scripts": {
+    "dev": "npx vercel dev",
+    "preview": "python3 -m http.server 8080"
+  }
+}
