@@ -23,23 +23,34 @@ const setStatus = (message, type = '') => {
   }
 };
 
-const normalizePhone = (value) => value.replace(/\D/g, '').slice(0, 11);
+const normalizePhone = (value) => {
+  const digits = String(value).replace(/\D/g, '');
+
+  if (digits.length > 10 && digits.startsWith('1')) {
+    return digits.slice(1, 11);
+  }
+
+  return digits.slice(0, 10);
+};
 
 const formatPhone = (value) => {
-  const digits = normalizePhone(value);
+  const localDigits = normalizePhone(value);
 
-  if (digits.length === 0) return '';
-
-  const localDigits = digits.length === 11 && digits.startsWith('1') ? digits.slice(1) : digits;
-
+  if (localDigits.length === 0) return '';
   if (localDigits.length <= 3) return `(${localDigits}`;
   if (localDigits.length <= 6) return `(${localDigits.slice(0, 3)}) ${localDigits.slice(3)}`;
   return `(${localDigits.slice(0, 3)}) ${localDigits.slice(3, 6)}-${localDigits.slice(6, 10)}`;
 };
 
 if (phoneInput) {
-  phoneInput.addEventListener('blur', () => {
+  const syncPhoneField = () => {
     phoneInput.value = formatPhone(phoneInput.value);
+  };
+
+  phoneInput.addEventListener('input', syncPhoneField);
+  phoneInput.addEventListener('blur', syncPhoneField);
+  phoneInput.addEventListener('paste', () => {
+    requestAnimationFrame(syncPhoneField);
   });
 }
 

@@ -77,7 +77,7 @@ Visitors use a short form:
 - service needed
 - optional notes
 
-The site posts to `/api/contact`, which emails you the lead through Resend. Then you text them back manually.
+The site posts to `/api/contact`, validates the number with optional Twilio Lookup, emails you the lead through Resend, and then you text them back manually.
 
 ## Tech
 
@@ -86,6 +86,7 @@ The site posts to `/api/contact`, which emails you the lead through Resend. Then
 - plain JavaScript
 - Google Fonts for Montserrat
 - Vercel serverless function for the contact form
+- optional Twilio Lookup validation
 - optional Resend email delivery
 
 No framework, no build step, easy to upload to GitHub and deploy to Vercel.
@@ -137,17 +138,25 @@ npx vercel dev
    - `RESEND_API_KEY`
    - `LEAD_DESTINATION_EMAIL`
    - `FROM_EMAIL`
+   - `TWILIO_API_KEY`
+   - `TWILIO_API_SECRET`
+   - optional: `TWILIO_LOOKUP_MODE` (`line_type` or `basic`)
 4. Deploy
 
 ### Example env values
 
 ```env
 RESEND_API_KEY=re_xxxxx
-LEAD_DESTINATION_EMAIL=you@yourdomain.com
-FROM_EMAIL=leads@yourdomain.com
+LEAD_DESTINATION_EMAIL=contact@onlyusedtesla.com
+FROM_EMAIL=leads@ionlybuyteslas.com
+TWILIO_API_KEY=SKxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+TWILIO_API_SECRET=your_twilio_api_secret
+TWILIO_LOOKUP_MODE=line_type
 ```
 
 `FROM_EMAIL` must be from a verified domain in Resend.
+
+Use `TWILIO_LOOKUP_MODE=basic` for free formatting/validation only. Use `line_type` if you want to reject landlines and office-style lines.
 
 ## Notes
 
@@ -155,3 +164,18 @@ FROM_EMAIL=leads@yourdomain.com
 - Your personal number is not included in the page source.
 - The contact form is the main conversion path.
 - The design is mobile-first and scales up with `em`-based breakpoints and root font-size increases.
+
+
+## Phone field
+
+The phone field now formats live as the visitor types, using `(555) 555-5555` while still normalizing and validating to 10 US digits on the backend.
+
+
+## Twilio Lookup behavior
+
+When Twilio Lookup is configured, the backend checks the submitted US number on the server before emailing you the lead.
+
+- `basic` mode validates and normalizes the number
+- `line_type` mode also checks line type and rejects obvious non-textable types like landlines, toll-free numbers, pagers, and voicemail lines
+
+If Twilio is not configured or temporarily unavailable, the form still falls back to the existing local 10-digit validation so you do not lose leads.
