@@ -12,7 +12,7 @@
 }
 
 .signature-hero h1 {
-  max-width: 12ch;
+  max-width: 13ch;
 }
 
 .signature-hero-media,
@@ -128,7 +128,7 @@
 .signature-proof-section .section-heading h2,
 .signature-workflow-grid h2,
 .owner-strip h2 {
-  max-width: 18ch;
+  max-width: 19ch;
 }
 
 .owner-strip {
@@ -196,6 +196,6 @@
   }
 
   .signature-hero h1 {
-    max-width: 11.5ch;
+    max-width: 12.5ch;
   }
 }
