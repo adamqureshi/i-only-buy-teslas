@@ -1,0 +1,37 @@
+This is a full replacement bundle for the public i-only-buy-teslas repo, plus the new Signature Series landing page.
+
+Upload EVERYTHING inside this folder to the ROOT of your GitHub repo.
+
+Main page stays in place:
+- /index.html
+- /styles.css
+- /script.js
+- /api/contact.js
+- /assets/*
+
+New page added:
+- /2026-signature-series/index.html
+- /2026-signature-series/signature-series.css
+- /assets/signature-series/*
+
+Live URL after Vercel redeploys:
+https://ionlybuyteslas.com/2026-signature-series/
+
+Fastest GitHub method:
+1. Download the zip.
+2. Unzip it on your computer.
+3. Open your repo on GitHub.
+4. Click Add file -> Upload files.
+5. Drag EVERYTHING inside this replacement folder into the repo root.
+6. Commit to main.
+
+If you want a different URL slug, rename the folder:
+- /2026-signature-series/
+
+Example:
+- /signature-series/ -> https://ionlybuyteslas.com/signature-series/
+
+If you rename the folder, also update these in that page HTML:
+- canonical URL
+- og:url
+- any /2026-signature-series/ reference

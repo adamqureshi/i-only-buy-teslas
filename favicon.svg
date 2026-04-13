@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="I Only Buy Teslas favicon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="I Only Buy Teslas icon">
   <rect width="64" height="64" rx="14" fill="#0b0d12"/>
-  <path d="M18 18h28" stroke="#6aa3ff" stroke-width="4" stroke-linecap="round"/>
-  <path d="M24 28h16" stroke="#f4f7fb" stroke-width="4" stroke-linecap="round"/>
-  <path d="M24 38h16" stroke="#f4f7fb" stroke-width="4" stroke-linecap="round"/>
-  <path d="M24 48h10" stroke="#6aa3ff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M16 17c4-5 12-8 16-8s12 3 16 8l-4 3c-2-3-7-6-12-6s-10 3-12 6l-4-3z" fill="#eae3e3"/>
+  <rect x="28" y="18" width="8" height="18" rx="3" fill="#eae3e3"/>
+  <rect x="18" y="18" width="28" height="6" rx="3" fill="#eae3e3"/>
+  <path d="M22 42c3 4 6 6 10 6s7-2 10-6l4 3c-4 5-9 8-14 8s-10-3-14-8l4-3z" fill="#eae3e3"/>
 </svg>
