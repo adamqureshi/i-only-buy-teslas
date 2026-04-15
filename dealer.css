@@ -1,3 +1,24 @@
+
+#lane-agent .section-heading h2 {
+  max-width: 14ch;
+}
+
+.lane-agent-grid {
+  margin-bottom: 1rem;
+}
+
+.lane-agent-copy {
+  max-width: 40rem;
+}
+
+.lane-agent-copy p {
+  margin: 0 0 1rem;
+}
+
+.lane-agent-benefits {
+  align-items: stretch;
+}
+
 .dealer-hero h1 {
   max-width: 11ch;
 }
