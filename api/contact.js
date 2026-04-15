@@ -1,9 +1,15 @@
 const SERVICE_LABELS = {
-  consult: 'Signature Series spot seller (invite only)',
-  search: 'Signature Series buyer (missed invite)',
-  sell: 'Signature Series spot seller (confirmed order)',
+  consult: 'Tesla buying consultation',
+  search: 'Tesla search / help finding the right match',
+  sell: 'Tesla selling help',
   dealer: 'Dealer inventory sourcing',
-  notsure: 'Signature Series process question',
+  notsure: 'General question',
+  buy10: 'Signature Series buyer (missed invite) — up to $10k premium',
+  buy20: 'Signature Series buyer (missed invite) — up to $20k premium',
+  buy25: 'Signature Series buyer (missed invite) — up to $25k+ premium',
+  sellinvite: 'Signature Series seller — invited holder',
+  sellconfirmed: 'Signature Series seller — confirmed order holder',
+  process: 'Signature Series process question',
 };
 
 const REJECTED_LINE_TYPES = new Set([
