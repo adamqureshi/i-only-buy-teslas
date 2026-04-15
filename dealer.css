@@ -1,0 +1,177 @@
+.dealer-hero h1 {
+  max-width: 11ch;
+}
+
+.dealer-hero .lead {
+  max-width: 43rem;
+}
+
+.dealer-hero-grid {
+  align-items: start;
+}
+
+.bridge-band-heading h2,
+#pricing .section-heading h2,
+#services .section-heading h2 {
+  max-width: 18ch;
+}
+
+.logo-band-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.logo-card,
+.workflow-step {
+  border: var(--border);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow);
+}
+
+.logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 7.25rem;
+  padding: 1.15rem 1.25rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+  text-decoration: none;
+}
+
+.logo-card:hover,
+.logo-card:focus-visible {
+  color: inherit;
+  border-color: var(--accent-strong);
+  transform: translateY(-0.0625rem);
+}
+
+.logo-card-dark {
+  background: rgba(0, 0, 0, 0.92);
+}
+
+.logo-card img {
+  display: block;
+  width: 100%;
+  max-width: 14rem;
+  max-height: 2.9rem;
+  object-fit: contain;
+}
+
+.logo-card img.logo-invert {
+  filter: brightness(0) invert(1) opacity(0.94);
+}
+
+.band-note {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  max-width: 52rem;
+}
+
+.dealer-card-grid {
+  align-items: stretch;
+}
+
+.workflow-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.workflow-step {
+  position: relative;
+  padding: 1.25rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+}
+
+.workflow-step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  min-height: 2rem;
+  margin-bottom: 0.85rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  border: 0.0625rem solid var(--line-strong);
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.workflow-step h3 {
+  margin-bottom: 0.55rem;
+}
+
+.workflow-step p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.workflow-step a {
+  color: var(--accent-strong);
+}
+
+.dealer-tools-grid {
+  align-items: stretch;
+}
+
+.pricing-grid {
+  align-items: stretch;
+}
+
+.dealer-contact-grid {
+  align-items: start;
+}
+
+.field-row {
+  display: grid;
+  gap: 0 1rem;
+}
+
+.dealer-contact-form textarea {
+  min-height: 9rem;
+}
+
+@media (min-width: 36em) {
+  .logo-band-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workflow-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .field-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 48em) {
+  .dealer-card-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .logo-band-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64em) {
+  .dealer-hero {
+    padding-top: 5.3rem;
+  }
+
+  .logo-band-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .workflow-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .workflow-step {
+    min-height: 100%;
+  }
+}
