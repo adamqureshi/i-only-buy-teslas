@@ -60,7 +60,7 @@
           <a href="#contact">Contact</a>
         </nav>
 
-        <a class="button button-primary header-cta" href="#contact">I missed my invite</a>
+        <a class="button button-primary header-cta" href="#contact">Request a text back</a>
       </div>
     </header>
 
@@ -165,8 +165,7 @@
               <p class="signature-panel-kicker">For invited holders</p>
               <h3>Have a spot to sell?</h3>
               <p>
-                Reach out too. I am already building the buyer side and can text you back if you
-                want to talk through your next step privately.
+                Reach out too. When you contact me, I need to know whether you only have the invite or already paid the $2,500 non-refundable order fee and have a confirmed order. I can text you back and talk through your next step privately.
               </p>
               <ul class="signature-list" role="list">
                 <li>Private first instead of public-post chaos.</li>
@@ -189,6 +188,7 @@
             </p>
             <ul class="signature-list" role="list">
               <li>Model S and Model X both in play.</li>
+              <li>Some sellers are invite-only. Some already have confirmed orders.</li>
               <li>Private matches only, not public marketplace chaos.</li>
               <li>I can walk you through the next step if there is a fit.</li>
             </ul>
@@ -323,28 +323,27 @@
         <div class="shell signature-workflow-grid">
           <div>
             <p class="eyebrow">How buying a spot works</p>
-            <h2>Simple process. Cash buyers first.</h2>
+            <h2>Simple process. Buyers and sellers both know the next step.</h2>
             <p class="lead owner-lead">
-              You leave your number. I text you back. If your timing and budget fit what I have,
-              I walk you through the next step.
+              You leave your number. I text you back. Buyers tell me budget and timing. Sellers tell me whether they only have the invite or already paid the $2,500 non-refundable order fee and have a confirmed order. Then I walk you through the next step.
             </p>
           </div>
 
           <ol class="process-list" role="list">
             <li>
-              <strong>Tell me you missed the invite</strong>
-              <span>Pick your buyer option in the form and tell me whether you want S or X.</span>
+              <strong>Tell me which side you are on</strong>
+              <span>Buyer or seller. Buyers tell me S or X. Sellers tell me invite only or confirmed order.</span>
             </li>
             <li>
-              <strong>Tell me your premium range</strong>
-              <span>$10k, $20k, or $25k+. Also tell me your state and your timing.</span>
+              <strong>Tell me your range or your seller status</strong>
+              <span>Buyers tell me $10k, $20k, or $25k+. Sellers tell me whether the $2,500 order fee is already paid.</span>
             </li>
             <li>
-              <strong>Confirm you are a cash buyer</strong>
+              <strong>Buyers should be cash-ready</strong>
               <span>This is not the right path if you need financing.</span>
             </li>
             <li>
-              <strong>I text you back if there is a fit</strong>
+              <strong>I text you back</strong>
               <span>If the numbers line up, I keep the process moving.</span>
             </li>
           </ol>
@@ -355,16 +354,15 @@
         <div class="shell contact-grid">
           <div>
             <p class="eyebrow">Contact</p>
-            <h2>I missed the invite. I want to buy a spot.</h2>
+            <h2>Buy a spot or sell your spot. I will text you back.</h2>
             <p class="contact-lead">
-              Current private seller supply: 15 spots. If you are a cash buyer and want a Signature
-              S or X, leave your info. I will review it and text you back.
+              Current private seller supply: 15 spots. If you missed the invite and want to buy, tell me your budget. If you are selling, tell me whether you only have the invite or already paid the $2,500 non-refundable order fee and have a confirmed order. I will review it and text you back.
             </p>
 
             <ul class="contact-points" role="list">
               <li>Current private seller supply: 15</li>
               <li>Cash buyers only</li>
-              <li>Plan on service-center delivery</li>
+              <li>If you are selling, tell me whether the $2,500 order fee has been paid</li>
             </ul>
 
             <p class="signature-legal-note">
@@ -402,9 +400,9 @@
                 <option value="buy10">I did not get the invite. I want to buy a spot — up to $10k</option>
                 <option value="buy20">I did not get the invite. I want to buy a spot — up to $20k</option>
                 <option value="buy25">I did not get the invite. I want to buy a spot — up to $25k+</option>
-                <option value="sellinvite">I got invited and I want to sell my spot</option>
-                <option value="sellconfirmed">I already confirmed and I want to sell my spot</option>
-                <option value="process">I need the process explained</option>
+                <option value="sellinvite">I got invited and want to sell my spot — I have NOT paid the $2,500 order fee</option>
+                <option value="sellconfirmed">I have a confirmed order and want to sell my spot — I paid the $2,500 non-refundable order fee</option>
+                <option value="process">I need the buy / sell process explained</option>
               </select>
             </div>
 
@@ -415,7 +413,7 @@
                 name="notes"
                 rows="5"
                 maxlength="500"
-                placeholder="Model S or X, your state, cash-ready status, how much premium you can pay, and your timing."
+                placeholder="Buyer: model, state, cash-ready status, budget, and timing. Seller: Model S or X, invite only or confirmed order, whether the $2,500 fee is paid, and your timing."
               ></textarea>
             </div>
 
@@ -427,7 +425,7 @@
             <input id="formStartedAt" name="formStartedAt" type="hidden" value="" />
 
             <button class="button button-primary button-full" type="submit" id="submit-button">
-              I missed my invite
+              Request a text back
             </button>
             <p class="form-note">
               Your number is only used so I can text or call you about this request. I do not sell
@@ -490,7 +488,7 @@
     </footer>
 
     <div class="mobile-cta" aria-hidden="false">
-      <a class="button button-primary button-full" href="#contact">I missed my invite</a>
+      <a class="button button-primary button-full" href="#contact">Request a text back</a>
     </div>
 
     <script src="../script.js"></script>
