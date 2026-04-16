@@ -7,9 +7,9 @@ const SERVICE_LABELS = {
   buy10: 'Signature Series buyer (missed invite) — up to $10k premium',
   buy20: 'Signature Series buyer (missed invite) — up to $20k premium',
   buy25: 'Signature Series buyer (missed invite) — up to $25k+ premium',
-  sellinvite: 'Signature Series seller — invited holder',
-  sellconfirmed: 'Signature Series seller — confirmed order holder',
-  process: 'Signature Series process question',
+  sellinvite: 'Signature Series seller — invite only / has NOT paid the $2,500 order fee',
+  sellconfirmed: 'Signature Series seller — confirmed order / paid the $2,500 non-refundable order fee',
+  process: 'Signature Series buy / sell process question',
 };
 
 const REJECTED_LINE_TYPES = new Set([
