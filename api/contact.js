@@ -1,9 +1,15 @@
 const SERVICE_LABELS = {
   consult: 'Tesla buying consultation',
-  search: 'Tesla Search Help',
-  sell: 'Sell your Tesla',
+  search: 'Tesla search / help finding the right match',
+  sell: 'Tesla selling help',
   dealer: 'Dealer inventory sourcing',
-  notsure: 'Not sure yet',
+  notsure: 'General question',
+  buy10: 'Model S Signature buyer — wants an available opportunity',
+  buy20: 'Model X Signature buyer — wants an alternate opportunity if another one opens',
+  buy25: 'Live Atlanta Model X Signature buyer — wants the current VIN-assigned opportunity',
+  sellinvite: 'Signature Series seller — invite only / has NOT paid the $2,500 order fee',
+  sellconfirmed: 'Signature Series seller — confirmed order / paid the $2,500 non-refundable order fee',
+  process: 'Signature Series live-opportunity / process question',
 };
 
 const REJECTED_LINE_TYPES = new Set([
@@ -261,30 +267,22 @@ module.exports = async (req, res) => {
       body: JSON.stringify({
         from: fromEmail,
         to: [destinationEmail],
-        subject: `New lead — ${serviceLabel}`,
+        subject: `${serviceLabel} — ${fullName}`,
         text: plainText,
         html,
+        reply_to: `${phoneCheck.e164}@sms.invalid`,
       }),
     });
 
     if (!resendResponse.ok) {
-      const errorText = await resendResponse.text();
-      console.error('Resend error:', errorText);
-      return res.status(500).json({
-        ok: false,
-        error: 'The request was received, but the notification could not be delivered. Please try again.',
-      });
+      const resendError = await resendResponse.text();
+      console.error('Resend send failed:', resendError);
+      return res.status(502).json({ ok: false, error: 'Email send failed. Please try again.' });
     }
 
-    return res.status(200).json({
-      ok: true,
-      message: 'Lead delivered successfully.',
-    });
+    return res.status(200).json({ ok: true });
   } catch (error) {
-    console.error('Contact form error:', error);
-    return res.status(500).json({
-      ok: false,
-      error: 'The form could not send right now. Please try again in a moment.',
-    });
+    console.error('Contact API error:', error);
+    return res.status(500).json({ ok: false, error: 'Server error. Please try again.' });
   }
 };
